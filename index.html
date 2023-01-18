@@ -22,6 +22,12 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
+<style>
+	.color {
+		color: #fff;
+	}
+</style>
+
 <body>
 
 	<!--================ Start Header Area =================-->
@@ -30,8 +36,14 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"
-						style="font-size:30px; font-weight:800; color:#17a2b8;">Harshan</a>
+					<a class="navbar-brand logo_h" href="index.html" style="font-size:30px; font-weight:800; "
+						id="logo">Harshan</a>
+					<script>
+						const a = document.getElementById("logo");
+						if (window.screen.width <= 768) {
+							a.classList.add("color");
+						}
+					</script>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
@@ -501,6 +513,7 @@
 		emailjs.init('dlNCeCjGqFpvr5ygD')
 	</script>
 	<script type="text/javascript">
+
 		const btn = document.getElementById('btn');
 		document.getElementById('form')
 			.addEventListener('submit', function (event) {
